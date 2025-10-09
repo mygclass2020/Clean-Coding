@@ -23,7 +23,7 @@ When writing code, you shouldn't just focus on making it work. You should also a
 ## 1. Foundations of Clean Coding
 **A. Naming Convention -**
 
-a. Use Meaningful and Descriptive names
+I. Use Meaningful and Descriptive names
   ```
   # Avoid naming like this
   def function1(input):
@@ -37,7 +37,7 @@ a. Use Meaningful and Descriptive names
       discount = price * discount_percent
       return price - discount
   ```
-b. Use Comments where necessary
+II. Use Comments where necessary
   ```
   # Avoid unnecessary comments
 
@@ -59,15 +59,15 @@ b. Use Comments where necessary
       discount = price * discount_percent
       return price - discount
   ```
-d. Follow established code-writing standards
+III. Follow established code-writing standards
 
-**Types of Cases:**
+**a. Types of Cases:**
 - **camelCase** : myVariableName (e.g: Java, JavaScript)
 - **PascalCase** : MyClassName (e.g: C#)
 - **snake_case** : my_variable_name (e.g: Python)
 - **dash-case** : my-element-class (e.g: html, css)
 
-**Indentation:**
+**b. Indentation:**
 ```
 # Without indentation
 
@@ -108,3 +108,28 @@ def calculate_laptop_price(quantity, price):
 def calculate_product_price(product_quantity, product_price):
   return product_quantity * product_price
 ```
+---
+## **2. SOLID Principles**
+- **Robert C. Martin** compiled these principles in the 1990s
+- These principles enable us to manage several software design problems
+- From **tightly coupled code, no encapsulation** to the desired results of **loosely coupled, encapsulated real business needs**
+
+  **I. S - Single Responsibility Principle (SRP):**
+
+  - SRP says, "Every software module should have only one reason to change."
+  - Every class in your code should have only **one job** and be related to a **single purpose**
+  - Does not mean that your classes should only contain one method or property
+  - SRP gives us a good way of identifying classes at the design phase of an application
+ 
+  **II. O - Open / Closed Principle (OCP):**
+
+  - OCP says, "A software module/class is open for extension and closed for modification."
+  - **"Open for extension"** means we must design our module/class so that the new functionality can be added only when new requirements are generated.
+  - **"Closed for modification"** means we have already developed a class, and it has gone through unit testing. We should then not alter it until we find bugs.
+  - Since a class should be open for extensions; we can use inheritance
+ 
+  **III. L - Liskov Substitution Principle (LSP):**
+
+  **IV. I - Interface Segregation Principle (ISP):**
+
+  **V. D - Dependency Inversion Principle (DIP):**
