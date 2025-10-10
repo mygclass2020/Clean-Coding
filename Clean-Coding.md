@@ -130,6 +130,19 @@ def calculate_product_price(product_quantity, product_price):
  
   **III. L - Liskov Substitution Principle (LSP):**
 
+  - Derived class should not affect the behavior of the parent class
+  - A derived class must be substitutable for its base class
+  - It is an extension of the Open Closed Principle
+
   **IV. I - Interface Segregation Principle (ISP):**
 
+  - Instead of using one large interface, many small interfaces are preferred based on groups of methods, each serving one submodule.
+  - Clients should not be forced to depend upon interfaces they don't use
+  - Each interface should have a specific purpose/responsibility
+  - The larger the interface, the more likely it includes methods not all implementers can use.
+
   **V. D - Dependency Inversion Principle (DIP):**
+
+  - High-level module/classes should not depend on Low-level modules/classes
+  - A high-level module/class that depends on low-level modules/classes is said to be tightly coupled
+  - Both of them need to be dependent on abstractions instead of each other
