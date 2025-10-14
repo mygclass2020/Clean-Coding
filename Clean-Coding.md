@@ -3,7 +3,7 @@
 ### Table of Content
 > - Foundations of Clean Coding
 > - SOLID Principles
-> - Refactoring Basics
+> - Refactoring Existing Code
 > - Design patterns for MVC
 > - Unit Testing
 ---
@@ -146,3 +146,65 @@ def calculate_product_price(product_quantity, product_price):
   - High-level module/classes should not depend on Low-level modules/classes
   - A high-level module/class that depends on low-level modules/classes is said to be tightly coupled
   - Both of them need to be dependent on abstractions instead of each other
+---
+
+## 3. Refactoring Existing Code
+
+- **Code Smells** :-
+  - Signs in source code that suggest a deeper problem, even if the code is still functional
+  - Those patterns which either duplicates, or complicates, or might make code dependent on other code
+  - Signify the weakness in design and might increase the risk of bugs and program failure in the future
+  - Does not alter the external behavior of the code, only improves its internal structure
+  - Makes code much cleaner, clear, and simpler to understand
+ 
+**Broadly divided into 2 major types:**
+
+**1. Code smell within classes :**
+
+a. Comments
+b. Long Method
+c. Long Parameter List
+d. Large Classes
+e. Duplicate Code
+f. Dead Code
+
+**2. Code smell between classes :**
+
+a. Data Classes
+b. Data Clumps
+c. Alternative Classes with Different Interfaces
+d. Refused Bequest
+e. Lazy Class
+f. Shotgun Surgery
+
+**How to prevent Code Smells?**
+- Adhere to solid principles
+- Give your code self-documenting names
+- Maintain short methods
+- Refactor frequently
+
+---
+## 4. Design Patterns for MVC
+
+> The MVC design pattern is a software architecture pattern that separates an application into three main components: Model, View, and Controller, making it easier to manage and maintain the codebase.
+
+**I. Factory Pattern:**
+- Provides an interface for creating objects in a superclass
+- Allows subclasses to alter the type of objects that will be created
+
+**II. Strategy Pattern:**
+
+- Lets you define a family of algorithms
+- Puts each of the algorithm into a separate class
+- Makes the objects interchangeable
+
+**III. Observer Pattern:**
+
+- Lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing
+
+**IV. Repository Pattern:**
+
+- Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects
+
+---
+## 5. Unit Testing
