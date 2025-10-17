@@ -4,7 +4,6 @@
 > - Foundations of Clean Coding
 > - SOLID Principles
 > - Refactoring Existing Code
-> - Design patterns for MVC
 > - Unit Testing
 ---
 ## What is Clean Coding?
@@ -161,21 +160,21 @@ def calculate_product_price(product_quantity, product_price):
 
 **1. Code smell within classes :**
 
-a. Comments
-b. Long Method
-c. Long Parameter List
-d. Large Classes
-e. Duplicate Code
-f. Dead Code
+- Comments
+- Long Method
+- Long Parameter List
+- Large Classes
+- Duplicate Code
+- Dead Code
 
 **2. Code smell between classes :**
 
-a. Data Classes
-b. Data Clumps
-c. Alternative Classes with Different Interfaces
-d. Refused Bequest
-e. Lazy Class
-f. Shotgun Surgery
+- Data Classes
+- Data Clumps
+- Alternative Classes with Different Interfaces
+- Refused Bequest
+- Lazy Class
+- Shotgun Surgery
 
 **How to prevent Code Smells?**
 - Adhere to solid principles
@@ -184,27 +183,19 @@ f. Shotgun Surgery
 - Refactor frequently
 
 ---
-## 4. Design Patterns for MVC
+## 4. Unit Testing
 
-> The MVC design pattern is a software architecture pattern that separates an application into three main components: Model, View, and Controller, making it easier to manage and maintain the codebase.
+- A unit test is a test that exercises individual software components or methods, also known as a "unit of work."
 
-**I. Factory Pattern:**
-- Provides an interface for creating objects in a superclass
-- Allows subclasses to alter the type of objects that will be created
+**Benefits of Unit Testing:**
+- Less time performing functional tests
+- Protection against regression
+- Executable documentation
+- Less coupled code
 
-**II. Strategy Pattern:**
-
-- Lets you define a family of algorithms
-- Puts each of the algorithm into a separate class
-- Makes the objects interchangeable
-
-**III. Observer Pattern:**
-
-- Lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing
-
-**IV. Repository Pattern:**
-
-- Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects
-
----
-## 5. Unit Testing
+  **Characters of Good Unit Tests:**
+  - Fast
+  - Isolated
+  - Repeatable
+  - Self-checking
+  - Timely
