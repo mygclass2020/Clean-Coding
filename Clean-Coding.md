@@ -145,6 +145,8 @@ def calculate_product_price(product_quantity, product_price):
   - High-level module/classes should not depend on Low-level modules/classes
   - A high-level module/class that depends on low-level modules/classes is said to be tightly coupled
   - Both of them need to be dependent on abstractions instead of each other
+ 
+> Also check : https://www.c-sharpcorner.com/UploadFile/damubetha/solid-principles-in-C-Sharp/
 ---
 
 ## 3. Refactoring Existing Code
@@ -160,27 +162,49 @@ def calculate_product_price(product_quantity, product_price):
 
 **1. Code smell within classes :**
 
-- Comments
-- Long Method
+- Comments:
+    - Comments should make the code self-documenting and intension-revealing
+- Long Method:
+    - Functions and methods should be small and easy-to-read
+    - Any code more than 25 lines should be questioned
 - Long Parameter List
+    - Use maximum of 3-4 parameters in a function
+    - If values of parameters are output of some other function, pass it as a function instead of parameter
 - Large Classes
+    - Class with many lines of code is considered a code smell
+    - Refactoring techniques like extract class, extract subclass, extract interface etc. should be applied
 - Duplicate Code
+    - When code is repeated 2 or more times, merge it into single function or method
 - Dead Code
+    - Code that is not being used is dead code
+    - Functions with no calls or conditions should be deleted
 
 **2. Code smell between classes :**
 
 - Data Classes
+    - Classes with only data and no methods doesn't have any functionality
+    - Use global or local variables to refactor this code smell
 - Data Clumps
+    - Different parts of the code containing identical groups of variables are called clumps
+    - Create a new class to encapsulate the related data items 
 - Alternative Classes with Different Interfaces
+    - Two similar classes can be modified to share a common interface
 - Refused Bequest
+    - Subclass inherits methods and functionality from a parent class but doesn't use them, either by overriding them with empty implementations or by not calling them at all
+    - Indicates a problem with the inheritence heirarchy
 - Lazy Class
+    - Class with little or no use should be deleted as it can cost time and money both
 - Shotgun Surgery
+    - Single change leading to cascading changes in several classes should be avoided
+    - Code is hard to change, easy to break and has high chances of bugs as changes are needed in multiple places
 
 **How to prevent Code Smells?**
 - Adhere to solid principles
 - Give your code self-documenting names
 - Maintain short methods
 - Refactor frequently
+
+> Also check : https://www.geeksforgeeks.org/blogs/code-smell-a-general-introduction-and-its-type/
 
 ---
 ## 4. Unit Testing
@@ -199,3 +223,5 @@ def calculate_product_price(product_quantity, product_price):
   - Repeatable
   - Self-checking
   - Timely
+ 
+> Also check : https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices
